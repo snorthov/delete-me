@@ -1,10 +1,13 @@
+---
+declared-services:
+  my-tone-analyzer-service:
+    label: tone_analyzer
+    plan: standard
 applications:
-- disk_quota: 1024M
-  host: space-demo
-  name: space-demo
-  command: node server.js
+- services:
+  - my-tone-analyzer-service
+  name: space-tone
+  command: npm start
   path: .
-  domain: mybluemix.net
   instances: 1
-  memory: 512M
-  
+  memory: 512MB

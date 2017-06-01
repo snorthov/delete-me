@@ -58,3 +58,15 @@ body {
 .none {
 	background: blue;
 }
+
+.busy {
+	background: linear-gradient(to right, #f15361 0%, yellow 50%, #f15361 100%);
+	background-size: 300% 300%;
+    animation: Animation 3s infinite;
+}
+
+@keyframes Animation { 
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
